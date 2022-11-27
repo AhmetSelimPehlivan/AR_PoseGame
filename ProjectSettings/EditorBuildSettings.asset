@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PoseGame/PoseGame.unity
+    guid: 4a47d6ba11924174392e8801d8dd5f40
   m_configObjects: {}
