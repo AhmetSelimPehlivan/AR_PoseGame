@@ -71,12 +71,14 @@ public sealed class BeforeGameController : MonoBehaviour
                 }
             }
 
-            if (maxSliderValue < points)
-                slider.value = points * 1.0f;
-            
             if (points == 27)
             {
                 isStartForOkay += 1;
+                if (isStartForOkay > maxSliderValue)
+                {
+                    slider.value = isStartForOkay * 1.0f;
+                    maxSliderValue = isStartForOkay;
+                }
             }
             else if (isStartForOkay > 0)
                 isStartForOkay--;
