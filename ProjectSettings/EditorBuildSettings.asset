@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/BeforeGame/BeforeGame.unity
+    guid: f70c47593020b604a93a21f18e58cc00
+  - enabled: 1
     path: Assets/PoseGame/PoseGame.unity
     guid: 4a47d6ba11924174392e8801d8dd5f40
   m_configObjects: {}
