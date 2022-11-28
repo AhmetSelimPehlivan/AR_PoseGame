@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731689, g: 0.13414702, b: 0.1210784, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -923,7 +923,7 @@ MonoBehaviour:
       segmentationSigma: 1
   runBackground: 0
   visibilityThreshold: 0.5
-  slider: {fileID: 0}
+  slider: {fileID: 1451225837}
 --- !u!4 &1453601107
 Transform:
   m_ObjectHideFlags: 0

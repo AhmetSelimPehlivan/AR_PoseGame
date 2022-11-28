@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Collections;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using TensorFlowLite;
 using UnityEngine;
@@ -77,6 +78,7 @@ public sealed class BeforeGameController : MonoBehaviour
                 if (isStartForOkay > maxSliderValue)
                 {
                     slider.value = isStartForOkay * 1.0f;
+                    Debug.Log(slider.value);
                     maxSliderValue = isStartForOkay;
                 }
             }
@@ -86,9 +88,16 @@ public sealed class BeforeGameController : MonoBehaviour
             if (isStartForOkay > 15)
             {
                 Debug.Log("RESULT OKAY");
-                SceneManager.LoadScene("PoseGame");
+
+                StartCoroutine(waitOneSec());
             }
         }
+    }
+
+    private IEnumerator waitOneSec()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("PoseGame");
     }
 
     private void Invoke(Texture texture)

@@ -126,7 +126,6 @@ public class BlazePose : IDisposable
             Vector2 p = MathTF.LerpUnclamped(min, max, (Vector2)landmarks[i]);
             // w is visibility
             landmarks[i] = new Vector4(p.x, p.y, landmarks[i].z, landmarks[i].w);
-            Debug.Log("RESULT " + landmarks[i].w);
         }
     }
 
