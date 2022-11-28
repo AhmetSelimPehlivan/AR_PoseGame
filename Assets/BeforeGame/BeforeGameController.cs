@@ -67,27 +67,20 @@ public sealed class BeforeGameController : MonoBehaviour
             {
                 if (landmarks[i].w >= visibilityThreshold)
                 {
-                    Debug.Log("RESULT ANAN");
                     points += 1;
                 }
             }
 
+            if (maxSliderValue < points)
+                slider.value = points * 1.0f;
+            
             if (points == 27)
             {
                 isStartForOkay += 1;
-                if (isStartForOkay > maxSliderValue)
-                {
-                    Debug.Log("RESULT SHAKIRA");
-                    slider.value = isStartForOkay * 1.0f;
-                    Debug.Log("RESULT " + slider.value);
-                    maxSliderValue = isStartForOkay;
-                }
             }
             else if (isStartForOkay > 0)
                 isStartForOkay--;
             
-            Debug.Log("RESULT ISTRAT");
-            Debug.Log("RESULT " + isStartForOkay);
             if (isStartForOkay > 15)
             {
                 Debug.Log("RESULT OKAY");
