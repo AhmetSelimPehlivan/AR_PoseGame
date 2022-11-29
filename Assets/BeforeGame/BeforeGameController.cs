@@ -78,7 +78,6 @@ public sealed class BeforeGameController : MonoBehaviour
                 if (isStartForOkay > maxSliderValue)
                 {
                     slider.value = isStartForOkay * 1.0f;
-                    Debug.Log(slider.value);
                     maxSliderValue = isStartForOkay;
                 }
             }
@@ -87,8 +86,6 @@ public sealed class BeforeGameController : MonoBehaviour
             
             if (isStartForOkay > 15)
             {
-                Debug.Log("RESULT OKAY");
-
                 StartCoroutine(waitOneSec());
             }
         }
