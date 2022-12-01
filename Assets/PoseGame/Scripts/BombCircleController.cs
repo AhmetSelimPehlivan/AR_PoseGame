@@ -25,9 +25,10 @@ public class BombCircleController : MonoBehaviour
         m_TextComponent = txt.GetComponent<TMP_Text>();
         m_TextComponent.text = (Mathf.Max(float.Parse(m_TextComponent.text)-10.0f,0.0f)).ToString();
         GameObject explosion = Instantiate(_particles, transform.position, Quaternion.identity);
-        Debug.Log("hello exp"+explosion.transform.position);
-        Debug.Log("hello gameObject"+this.gameObject.transform.position);
+
         Destroy(this.gameObject);
+        GameObject.FindObjectOfType<AudioManager>().playSound("BombSound");
         Destroy(explosion, 2.0f);
+        
     }
 }

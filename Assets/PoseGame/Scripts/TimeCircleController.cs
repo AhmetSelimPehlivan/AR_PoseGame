@@ -16,7 +16,6 @@ public class TimeCircleController : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("TimeCircleController");
         Destroy(this.gameObject,lifeTime);
     }
     void Update()
@@ -30,5 +29,6 @@ public class TimeCircleController : MonoBehaviour
         timer.value += 10;
         text.text = ((int)timer.value).ToString();
         Destroy(this.gameObject);
+        GameObject.FindObjectOfType<AudioManager>().playSound("TimeSound");
     }
 }

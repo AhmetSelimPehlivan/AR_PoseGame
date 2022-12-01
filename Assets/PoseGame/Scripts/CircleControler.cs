@@ -20,7 +20,7 @@ public class CircleControler : MonoBehaviour {
    [SerializeField] private Point[] points ;
 
    private double accumulatedWeights ;
-   private System.Random rand = new System.Random () ;
+   private System.Random rand = new System.Random ();
 
 
    private void Awake () {
